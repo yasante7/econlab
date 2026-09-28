@@ -1,0 +1,136 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "description": "Standardized integer economics models for EconLab animated explainer videos.",
+  "models": {
+    "tax_and_deadweight_loss": {
+      "topic": "Specific Commodity Tax and Deadweight Loss",
+      "demand": "P = 100 - Q",
+      "supply": "P = 10 + Q",
+      "equilibrium_pre_tax": { "Q": 45, "P": 55 },
+      "tax_per_unit": 20,
+      "supply_post_tax": "P = 30 + Q",
+      "equilibrium_post_tax": {
+        "Q": 35,
+        "P_buyer": 65,
+        "P_seller": 45
+      },
+      "welfare": {
+        "tax_revenue": 700,
+        "deadweight_loss": 100,
+        "consumer_tax_incidence": 10,
+        "producer_tax_incidence": 10
+      },
+      "geometry_points": {
+        "pre_eq": [45, 55],
+        "post_eq_buyer": [35, 65],
+        "post_eq_seller": [35, 45],
+        "dwl_triangle": [[35, 65], [35, 45], [45, 55]],
+        "tax_revenue_rect": [[0, 45], [35, 45], [35, 65], [0, 65]]
+      }
+    },
+    "price_ceiling_rent_control": {
+      "topic": "Binding Price Ceiling (Rent Control)",
+      "demand": "P = 100 - Q",
+      "supply": "P = 10 + Q",
+      "equilibrium_pre_cap": { "Q": 45, "P": 55 },
+      "price_ceiling": 40,
+      "outcomes": {
+        "quantity_supplied": 30,
+        "quantity_demanded": 60,
+        "shortage": 30
+      },
+      "welfare": {
+        "deadweight_loss": 112.5,
+        "lost_producer_surplus_transfer": 375
+      },
+      "geometry_points": {
+        "pre_eq": [45, 55],
+        "ceiling_line_y": 40,
+        "q_supplied_point": [30, 40],
+        "q_demanded_point": [60, 40],
+        "dwl_triangle": [[30, 70], [30, 40], [45, 55]]
+      }
+    },
+    "price_floor_minimum_wage": {
+      "topic": "Binding Price Floor (Minimum Wage)",
+      "demand": "P = 100 - Q",
+      "supply": "P = 10 + Q",
+      "equilibrium_pre_floor": { "Q": 45, "P": 55 },
+      "price_floor": 70,
+      "outcomes": {
+        "quantity_demanded": 30,
+        "quantity_supplied": 60,
+        "surplus_unemployment": 30
+      },
+      "geometry_points": {
+        "pre_eq": [45, 55],
+        "floor_line_y": 70,
+        "q_demanded_point": [30, 70],
+        "q_supplied_point": [60, 70],
+        "dwl_triangle": [[30, 70], [30, 40], [45, 55]]
+      }
+    },
+    "production_subsidy": {
+      "topic": "Production Subsidy and Overproduction DWL",
+      "demand": "P = 100 - Q",
+      "supply": "P = 10 + Q",
+      "equilibrium_pre_sub": { "Q": 45, "P": 55 },
+      "subsidy_per_unit": 20,
+      "supply_post_sub": "P = -10 + Q",
+      "equilibrium_post_sub": {
+        "Q": 55,
+        "P_buyer": 45,
+        "P_seller": 65
+      },
+      "welfare": {
+        "government_cost": 1100,
+        "deadweight_loss": 100
+      },
+      "geometry_points": {
+        "pre_eq": [45, 55],
+        "post_eq": [55, 45],
+        "seller_received": [55, 65],
+        "dwl_triangle": [[45, 55], [55, 65], [55, 45]]
+      }
+    },
+    "negative_externality_pigouvian_tax": {
+      "topic": "Negative Production Externality (Pollution)",
+      "marginal_private_benefit": "P = 100 - Q",
+      "marginal_private_cost": "P = 10 + Q",
+      "marginal_external_cost": 20,
+      "marginal_social_cost": "P = 30 + Q",
+      "private_market_outcome": { "Q": 45, "P": 55 },
+      "social_optimum": { "Q": 35, "P": 65 },
+      "pigouvian_tax": 20,
+      "welfare": {
+        "unregulated_dwl": 100,
+        "welfare_gain_from_tax": 100
+      },
+      "geometry_points": {
+        "private_eq": [45, 55],
+        "social_eq": [35, 65],
+        "dwl_triangle": [[35, 65], [45, 55], [45, 75]]
+      }
+    },
+    "monopoly_deadweight_loss": {
+      "topic": "Monopoly Pricing vs Perfect Competition",
+      "demand": "P = 100 - Q",
+      "marginal_revenue": "P = 100 - 2Q",
+      "marginal_cost": "P = 20",
+      "competitive_outcome": { "Q": 80, "P": 20 },
+      "monopoly_outcome": { "Q": 40, "P": 60 },
+      "welfare": {
+        "monopoly_profit": 1600,
+        "consumer_surplus": 800,
+        "deadweight_loss": 800
+      },
+      "geometry_points": {
+        "mr_equals_mc": [40, 20],
+        "monopoly_point": [40, 60],
+        "competitive_point": [80, 20],
+        "dwl_triangle": [[40, 60], [40, 20], [80, 20]],
+        "profit_rect": [[0, 20], [40, 20], [40, 60], [0, 60]]
+      }
+    }
+  }
+}

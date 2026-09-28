@@ -1,0 +1,30 @@
+{
+  "description": "High-contrast academic color palette for EconLab Manim animations (3Blue1Brown inspired).",
+  "palette": {
+    "curves": {
+      "demand": { "hex": "#58C4DD", "name": "BLUE_C", "role": "Demand curve (Marginal Benefit / MPB / MSB)" },
+      "supply": { "hex": "#FC6255", "name": "RED_C", "role": "Supply curve (Marginal Private Cost / MPC)" },
+      "shifted_supply": { "hex": "#FF8888", "name": "RED_A", "role": "Supply shifted by tax or cost increase" },
+      "social_cost": { "hex": "#9A72AC", "name": "PURPLE_C", "role": "Marginal Social Cost (MSC)" },
+      "marginal_revenue": { "hex": "#4CB570", "name": "GREEN_C", "role": "Marginal Revenue curve in Monopoly" }
+    },
+    "welfare_areas": {
+      "consumer_surplus": { "hex": "#83C167", "name": "GREEN_D", "opacity": 0.35, "role": "Consumer Surplus shaded triangle" },
+      "producer_surplus": { "hex": "#F0AC5F", "name": "ORANGE", "opacity": 0.35, "role": "Producer Surplus shaded triangle" },
+      "tax_revenue": { "hex": "#9A72AC", "name": "PURPLE_C", "opacity": 0.45, "role": "Government Tax Revenue rectangle" },
+      "deadweight_loss": { "hex": "#FFFF00", "name": "YELLOW_C", "opacity": 0.6, "role": "Deadweight Loss (DWL) triangle" },
+      "monopoly_profit": { "hex": "#5CD0B3", "name": "TEAL_C", "opacity": 0.4, "role": "Economic profit rectangle" }
+    },
+    "controls_and_guides": {
+      "price_cap_or_floor": { "hex": "#FFD700", "name": "GOLD", "stroke_width": 3.5, "role": "Price ceiling or floor dashed/solid line" },
+      "equilibrium_point": { "hex": "#FFFFFF", "name": "WHITE", "radius": 0.08, "role": "Equilibrium dot marker" },
+      "guide_lines": { "hex": "#888888", "name": "GRAY", "stroke_width": 1.5, "role": "Dashed guide lines to coordinate axes" },
+      "shortage_or_surplus": { "hex": "#FF4444", "name": "RED_B", "role": "Brace and label highlighting market disequilibrium" }
+    },
+    "typography": {
+      "primary_text": { "hex": "#FFFFFF", "name": "WHITE", "role": "General labels, axis titles" },
+      "callout_text": { "hex": "#FFFF00", "name": "YELLOW", "role": "Emphasized stats, policy warnings" },
+      "secondary_text": { "hex": "#BBBBBB", "name": "LIGHT_GRAY", "role": "Sub-captions, coordinate values" }
+    }
+  }
+}
